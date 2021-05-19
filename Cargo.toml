@@ -13,6 +13,6 @@ members = [
 ]
 
 [patch.crates-io]
-rust-gpu-tools = { git = "https://github.com/filecoin-project/rust-gpu-tools", branch = "opencl3" }
-neptune = { git = "https://github.com/filecoin-project/neptune", branch = "opencl3" }
-bellperson = { git = "https://github.com/filecoin-project/bellperson", branch = "opencl3" }
+rust-gpu-tools = { git = "https://github.com/filecoin-project/rust-gpu-tools", branch = "tmp-opencl3" }
+neptune = { git = "https://github.com/filecoin-project/neptune", branch = "tmp-opencl3" }
+bellperson = { git = "https://github.com/filecoin-project/bellperson", branch = "tmp-opencl3" }
