@@ -480,10 +480,11 @@ fn verify_store(config: &StoreConfig, arity: usize, required_configs: usize) -> 
             let cur_path = orig_path
                 .clone()
                 .replace(".dat", format!("-{}.dat", i).as_str());
-
+            info!("cur_path: {}", cur_path.clone());
             if Path::new(&cur_path).exists() {
                 let path_str = cur_path.as_str();
                 let tree_names = vec!["tree-d", "tree-c", "tree-r-last"];
+                info!("path_str: {}", path_str.clone());
                 for name in tree_names {
                     if path_str.contains(name) {
                         configs.push(StoreConfig::from_config(
@@ -494,6 +495,8 @@ fn verify_store(config: &StoreConfig, arity: usize, required_configs: usize) -> 
                         break;
                     }
                 }
+            } else {
+                info!("cannot find cur_path: {}", cur_path.clone());
             }
         }
 
