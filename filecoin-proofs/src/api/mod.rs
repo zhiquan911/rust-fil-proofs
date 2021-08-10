@@ -466,6 +466,7 @@ where
 
 // Verifies if a DiskStore specified by a config (or set of 'required_configs' is consistent).
 fn verify_store(config: &StoreConfig, arity: usize, required_configs: usize) -> Result<()> {
+    info!("required_configs: {}", required_configs);
     let store_path = StoreConfig::data_path(&config.path, &config.id);
     if !Path::new(&store_path).exists() {
         // Configs may have split due to sector size, so we need to
